@@ -1,0 +1,9 @@
+FROM heroku/heroku:16
+
+# This should match with package.json node engine version
+ENV NODE_VERSION 6.11.2
+
+# Install the specified Heroku node version
+RUN curl -s https://s3pository.heroku.com/node/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz | \
+    tar --strip-components=1 -xz -C /usr/local && \
+    ln -s /usr/local/bin/node /usr/local/bin/nodejs

@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile-heroku
+    command: bash -c "npm install && npm start"
+    working_dir: /app
+    volumes:
+      - '.:/app'
+    ports:
+      - '4000:4000'
