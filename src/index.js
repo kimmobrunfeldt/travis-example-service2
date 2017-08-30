@@ -7,5 +7,5 @@ app.get('/api/test', (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log('Service 2 listening on port 000!')
+  console.log('Service 2 listening on port 4000!')
 });
